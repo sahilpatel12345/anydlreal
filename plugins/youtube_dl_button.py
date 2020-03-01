@@ -201,7 +201,7 @@ async def youtube_dl_call_back(bot, update):
             )
             logger.info(images)
             await bot.edit_message_text(
-                text=Config.HTTP_PROXY,
+                text=Translation.UPLOAD_START,
                 chat_id=update.message.chat.id,
                 message_id=update.message.message_id
             )
