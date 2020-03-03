@@ -323,8 +323,8 @@ async def youtube_dl_call_back(bot, update):
             if images is not None:
                 i = 0
                 caption = "@GTMovies"
-                #if is_w_f:
-                    #caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
+                if is_w_f:
+                    caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
