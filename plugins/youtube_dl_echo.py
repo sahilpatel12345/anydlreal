@@ -292,7 +292,7 @@ async def echo(bot, update):
                 callback_data=(cb_string_file).encode("UTF-8")
             )
         ])
-        reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+        reply_markup = pyrogram.InlineKeyboardMarkup("DFile")
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.FORMAT_SELECTION.format(""),
