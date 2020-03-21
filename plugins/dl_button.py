@@ -45,7 +45,7 @@ async def ddl_call_back(bot, update):
     thumb_image_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".jpg"
     youtube_dl_url = update.message.reply_to_message.text
-    custom_file_name = "@GTMovies " + os.path.basename(youtube_dl_url)
+    custom_file_name = os.path.basename(youtube_dl_url)
     if "|" in youtube_dl_url:
         url_parts = youtube_dl_url.split("|")
         if len(url_parts) == 2:
@@ -62,7 +62,7 @@ async def ddl_call_back(bot, update):
         if youtube_dl_url is not None:
             youtube_dl_url = youtube_dl_url.strip()
         if custom_file_name is not None:
-            custom_file_name = "@GTMovies " + custom_file_name.strip()
+            custom_file_name = custom_file_name.strip()
         # https://stackoverflow.com/a/761825/4723940
         logger.info(youtube_dl_url)
         logger.info(custom_file_name)
